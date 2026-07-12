@@ -1,5 +1,136 @@
 [
   {
+    "ContainingType": "Insurance_API.Controllers.InsuranceController",
+    "Method": "Create",
+    "RelativePath": "api/Insurance/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Insurance_API.DTO.InsuranceMasterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Insurance_API.Controllers.InsuranceController",
+    "Method": "Delete",
+    "RelativePath": "api/Insurance/Delete/{insuranceId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insuranceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Insurance_API.Controllers.InsuranceController",
+    "Method": "GetAll",
+    "RelativePath": "api/Insurance/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Insurance_API.Controllers.InsuranceController",
+    "Method": "GetAllPaged",
+    "RelativePath": "api/Insurance/GetAllPaged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "policyNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "policyHolderName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "insuranceType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Insurance_API.Controllers.InsuranceController",
+    "Method": "GetById",
+    "RelativePath": "api/Insurance/GetById/{insuranceId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insuranceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Insurance_API.Controllers.InsuranceController",
+    "Method": "Update",
+    "RelativePath": "api/Insurance/Update/{insuranceId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insuranceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Insurance_API.DTO.InsuranceMasterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductApi.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "api/Login/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Insurance_API.DTO.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Insurance_API.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

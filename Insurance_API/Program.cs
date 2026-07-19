@@ -15,6 +15,18 @@ builder.Services.AddScoped<IInsuranceRepository, InsuranceRepositories>();
 builder.Services.AddScoped<IInsuranceService, InsuranceService>();
 builder.Services.AddAutoMapper(cfg => cfg.AddMaps(typeof(InsuranceProfile).Assembly));
 
+var AllowAngular = "_allowAngular";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: AllowAngular,
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:4200")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -87,6 +99,7 @@ app.UseSwaggerUI();
 /*{
     app.MapOpenApi();
 }*/
+app.UseCors(AllowAngular);
 
 app.UseAuthorization();
 
